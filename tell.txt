@@ -1,0 +1,44 @@
+git安装：
+	直接默认安装即可
+	最好在Notepad++中设置UTF-8无BOM格式编码  新建.txt,否则编码易出现问题
+	
+	
+	安装完成后，还需要最后一步设置，在命令行输入：
+	$ git config --global user.name "Your Name"
+	$ git config --global user.email "email@example.com"
+	
+	git命令
+	
+	1、mkdir filename  新建文件
+	2、cd filename 进入文件
+	3、pwd 显示当前目录
+	
+	4、git init  git仓库建立
+	5、ls -ah 显示.git目录
+	
+	注：在目录文件夹中新建、添加、修改东西
+	6、git add file或者. 把文件添加到仓库（可file1 file2）
+	7、git commit -m "版本注释" 
+	8、git status 时刻掌握仓库当前状态
+	9、git diff file 查看有修改状态的文件的修改部分的difference
+	
+	10、git log  从最近到最远的提交日志（--pretty=oneline 添加版本号）
+	11、$ git reset --hard HEAD^(HEAD是当前版本号，可以此向上查找版本号)  回退到上一个版本（$ git reset --hard 3628164），Git的版本回退速度非常快
+		用git diff HEAD -- readme.txt命令可以查看工作区和版本库里面最新版本的区别
+	12、$ cat readme.txt  看看readme.txt的内容
+	13、git reflog 查看历史命令
+	
+	14、git checkout -- readme.txt(filename)  丢弃工作区的修改
+			一种没放入暂存区，撤销修改就回到和版本库一模一样的状态；
+			一种已添加到暂存区，又做了修改，撤销修改就回到添加到暂存区后的状态
+			即 让这个文件回到最近一次git commit或git add时的状态。
+			
+	15、改乱了工作区某文件，想直接丢弃工作区修改  git checkout -- file	
+	16、改乱了工作区文件内容，并且添加到缓存区，想丢弃修改  git reset HEAD file  然后git checkout -- file	
+	
+	17、$ ssh-keygen -t rsa -C "527510567@qq.com" 获得本机ssh keygen  在github中设置ssh时，key为id_rsa.pub中内容
+
+	
+	
+	
+	
