@@ -80,6 +80,21 @@ git安装：
 		6----合并完成，删除dev分支：git branch -d dev
 		7----查看当前分支：git branch（只剩下master分支了）
 		
+		注：查看修改文件内容：vi filename，如果冲突了，在文件中合并内容重新上传即可
+			git log --graph命令可以看到分支合并图（git log --graph --pretty=oneline --abbrev-commit）
+			
+			
+	分支管理策略
+		Fast Forward模式下删除分支就丢掉分支信息，我们实战--no-ff方式的git merge
+			1--- git checkout -b dev
+			2--- git add readme.txt
+			3--- git commit -m "注解"
+			4--- git checkout master 
+			5--- git merge --no-ff -m "merge with no-ff" dev
+			6--- git log --graph --pretty=oneline --abbrev-commit合并后查看分支历史
+			
+		合并分支时，加上--no-ff参数就可以用普通模式合并，合并后的历史有分支，
+		能看出来曾经做过合并，而fast forward合并就看不出来曾经做过合并	
 
 
 
