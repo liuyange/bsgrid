@@ -66,6 +66,74 @@ git安装：
 		git clone可是https://github.com/michaelliao/gitskills.git地址
 		git支持https、ssh，但是ssh支持的原生git协议速度最快
 	
-	
+	创建并合并分支
+		git主分支叫master分支，HEAD---指向master，master---指向提交，HEAD指向当前分支
+		创建新分支dev，新指针dev指向master相同的提交，HEAD指向dev就表示当前分支在dev上
+		此时改变的时dev分支，master分支无变化，完成修改后把dev合并到master上即可，最简单方式是：
+		直接把master指向dev的当前提交。
+		合并完成后，直接删除dev分支就把dev指针删掉了，只留主分支master
+		1----创建dev分支并切换到dev分支：git checkout -b dev(git branch dev    git checkout dev)
+		2----git branch查看当前分支：git branch（当前分支前*）
+		3----当前分支操作：git add readme.txt   git commit -m "branch dev change"
+		4----dev工作完成，切换回master分支：git checkout master
+		5----把dev分支内容合并到master：git merge dev
+		6----合并完成，删除dev分支：git branch -d dev
+		7----查看当前分支：git branch（只剩下master分支了）
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
 	
 	
