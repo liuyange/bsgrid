@@ -2,7 +2,8 @@ git安装：
 	直接默认安装即可
 	最好在Notepad++中设置UTF-8无BOM格式编码  新建.txt,否则编码易出现问题
 	
-	
+	mac直接git --version看看是否有默认git，若没有brew install git 
+	which git查找git文件夹
 	安装完成后，还需要最后一步设置，在命令行输入：
 	$ git config --global user.name "Your Name"
 	$ git config --global user.email "email@example.com"
